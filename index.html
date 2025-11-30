@@ -1,550 +1,124 @@
-</html>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Preeti | Portfolio</title>
+    <title>Car Recommendation System</title>
 
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #1a1a1a, #333);
+            padding: 0;
+            font-family: Poppins, sans-serif;
+            background: #0d0d0d;
             color: white;
         }
-        
-        header {
-            text-align: center;
-            padding: 60px 20px;
-        }
-        
-        header h1 {
-            font-size: 42px;
-            margin-bottom: 10px;
-            color: #00eaff;
-        }
-        
-        header p {
-            font-size: 18px;
-            opacity: 0.8;
-        }
-        
-        .section {
-            padding: 40px 20px;
-            max-width: 900px;
-            margin: auto;
-        }
-        
-        h2 {
-            color: #00eaff;
-            border-left: 5px solid #00eaff;
-            padding-left: 10px;
-        }
-        
-        .project-box {
-            background: #222;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 10px;
-            transition: 0.3s;
-            border: 1px solid #444;
-        }
-        
-        .project-box:hover {
-            transform: scale(1.02);
-            border-color: #00eaff;
-        }
-        
-        a {
-            color: #00eaff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        
-        .footer {
-            text-align: center;
-            padding: 20px;
-            margin-top: 20px;
-            opacity: 0.7;
-        }
-    </style>
-</head>
 
-<body>
-
-    <header>
-        <h1>Preeti Choudhary</h1>
-        <p>Machine Learning Engineer | Data Science Enthusiast</p>
-    </header>
-
-    <div class="section">
-        <h2>About Me</h2>
-        <p>
-            I am a passionate Machine Learning & Data Science enthusiast skilled in building predictive models, recommendation systems, and full-stack ML projects. This webpage highlights my key projects and achievements.
-        </p>
-    </div>
-
-    <div class="section">
-        <h2>Projects</h2>
-
-        <div class="project-box">
-            <h3>🚗 Car Recommendation System (Machine Learning)</h3>
-            <p>
-                A ML-based system that recommends the best car based on user preferences such as budget, brand, fuel type, and body type.
-            </p>
-            <p><b>Tech Used:</b> Python, Scikit-Learn, Pandas, HTML/CSS</p>
-            <p><a href="#">🔗 Live Demo</a> &nbsp;|&nbsp; <a href="#">📂 GitHub Link</a></p>
-        </div>
-
-        <div class="project-box">
-            <h3>📊 Customer Churn Prediction</h3>
-            <p>Built an ML model to predict customer churn using demographic and usage patterns.</p>
-            <p><a href="#">📂 GitHub</a></p>
-        </div>
-
-        <div class="project-box">
-            <h3>🏡 House Price Prediction</h3>
-            <p>Used Regression algorithms to predict housing prices based on multiple features.</p>
-            <p><a href="#">📂 GitHub</a></p>
-        </div>
-
-        <div class="project-box">
-            <h3>💰 Health Insurance Premium Prediction</h3>
-            <p>Machine learning model estimating insurance premiums using lifestyle & demographic data.</p>
-            <p><a href="#">📂 GitHub</a></p>
-        </div>
-
-    </div>
-
-    <div class="section">
-        <h2>Contact</h2>
-        <p>Email: <a href="#">choudharypreeti775@gmail.com</a></p>
-        <p>GitHub: <a href="#">github.com/preetchoudhary333</a></p>
-
-    </div>
-
-    <div class="footer">
-        © 2025 Preeti | All Rights Reserved
-    </div>
-
-</body>
-
-</html>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Car Recommender — Preferences</title>
-    <style>
-        /* style.css - shared styles, slideshow, animations */
-        
-         :root {
-            --primary: #0f3b8c;
-            --accent: #2aa0ff;
-            --glass: rgba(255, 255, 255, 0.86);
-            --card-shadow: 0 10px 30px rgba(10, 30, 80, 0.12);
-        }
-        
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0
-        }
-        
-        html,
+        /* Background Slideshow */
         body {
-            height: 100%
-        }
-        
-        body {
-            font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-            background: linear-gradient(180deg, #e6f0ff, #f7fbff);
-            color: #03203c;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            min-height: 100vh;
-            position: relative;
-        }
-        /* Full-screen animated slideshow background */
-        
-        .bg-slide {
-            position: fixed;
-            inset: 0;
-            z-index: -2;
+            animation: bgSlide 25s infinite alternate ease-in-out;
             background-size: cover;
-            background-position: center;
-            animation: bgSlide 32s linear infinite;
-            filter: saturate(0.95) contrast(1.03) brightness(0.98);
+            background-attachment: fixed;
         }
-        /* subtle overlay so text is readable */
-        
-        .bg-overlay {
-            position: fixed;
-            inset: 0;
-            background: linear-gradient(180deg, rgba(6, 20, 40, 0.18), rgba(255, 255, 255, 0.05));
-            z-index: -1;
-        }
-        /* keyframes for background images */
-        
+
         @keyframes bgSlide {
-            0% {
-                background-image: url('https://images.pexels.com/photos/358070/pexels-photo-358070.jpeg');
-            }
-            20% {
-                background-image: url('https://images.pexels.com/photos/210019/pexels-photo-210019.jpeg');
-            }
-            40% {
-                background-image: url('https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg');
-            }
-            60% {
-                background-image: url('https://images.pexels.com/photos/1149831/pexels-photo-1149831.jpeg');
-            }
-            80% {
-                background-image: url('https://images.pexels.com/photos/305070/pexels-photo-305070.jpeg');
-            }
-            100% {
-                background-image: url('https://images.pexels.com/photos/358070/pexels-photo-358070.jpeg');
-            }
+            0% { background-image: url('https://images.pexels.com/photos/358070/pexels-photo-358070.jpeg'); }
+            25% { background-image: url('https://images.pexels.com/photos/210019/pexels-photo-210019.jpeg'); }
+            50% { background-image: url('https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg'); }
+            75% { background-image: url('https://images.pexels.com/photos/1149831/pexels-photo-1149831.jpeg'); }
+            100% { background-image: url('https://images.pexels.com/photos/305070/pexels-photo-305070.jpeg'); }
         }
-        /* container layout */
-        
+
         .container {
-            width: 92%;
-            max-width: 1100px;
-            margin: 36px auto;
-        }
-        /* header */
-        
-        .site-header {
-            text-align: center;
-            margin-bottom: 18px;
-            color: var(--primary);
-        }
-        
-        .site-header h1 {
-            font-size: 28px;
-            letter-spacing: 0.3px;
-            margin-bottom: 6px;
-        }
-        
-        .site-header p {
-            color: #1e3f66;
-            opacity: 0.85;
-        }
-        /* glass sections */
-        
-        .glass {
-            background: var(--glass);
-            border-radius: 14px;
-            padding: 18px;
-            box-shadow: var(--card-shadow);
-            backdrop-filter: blur(6px) saturate(1.05);
-        }
-        /* form layout */
-        
-        .form-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 12px;
-        }
-        
-        .form-row {
-            margin-bottom: 12px;
-        }
-        
-        label {
-            display: block;
-            font-weight: 600;
-            margin-bottom: 6px;
-            color: #083159
-        }
-        
-        input[type="text"],
-        input[type="number"],
-        select,
-        input#liveSearch {
-            width: 100%;
-            padding: 10px 12px;
-            border-radius: 8px;
-            border: 1px solid rgba(10, 25, 60, 0.07);
-            background: rgba(255, 255, 255, 0.98);
-            font-size: 14px;
-        }
-        /* chips */
-        
-        .feature-chips {
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-            margin-top: 6px;
-        }
-        
-        .chip {
-            padding: 8px 12px;
-            border-radius: 999px;
-            border: 1px solid rgba(10, 25, 60, 0.07);
-            background: transparent;
-            cursor: pointer;
-            font-weight: 600;
-            color: #083159;
-        }
-        
-        .chip.active {
-            background: linear-gradient(90deg, var(--accent), #0066cc);
-            color: white;
-            box-shadow: 0 8px 24px rgba(40, 120, 220, 0.12);
-        }
-        /* actions */
-        
-        .actions {
-            margin-top: 12px;
-            display: flex;
-            gap: 12px;
-            justify-content: flex-end;
-        }
-        
-        .btn {
-            padding: 10px 14px;
-            border-radius: 10px;
-            border: none;
-            cursor: pointer;
-            font-weight: 700;
-        }
-        
-        .btn.primary {
-            background: linear-gradient(90deg, var(--primary), var(--accent));
-            color: white;
-            box-shadow: 0 8px 22px rgba(10, 40, 110, 0.12);
-        }
-        
-        .btn.ghost {
-            background: transparent;
-            border: 1px solid rgba(10, 25, 60, 0.08);
-            color: var(--primary);
-        }
-        /* results page specific */
-        
-        .results-section {
-            margin-top: 18px;
-            padding: 12px;
-        }
-        
-        .info-bar {
-            margin: 10px 0;
-            color: #123;
-            font-weight: 600;
-        }
-        /* spinner small */
-        
-        .spinner {
-            width: 42px;
-            height: 42px;
-            border-radius: 50%;
-            border: 4px solid rgba(0, 0, 0, 0.08);
-            border-top-color: var(--accent);
-            animation: spin 1s linear infinite;
-            margin: 12px auto;
-            display: none;
-        }
-        
-        @keyframes spin {
-            to {
-                transform: rotate(360deg);
-            }
-        }
-        /* grid of cards */
-        
-        .car-results {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 14px;
-            margin-top: 8px;
-        }
-        
-        .car-card {
-            display: flex;
-            gap: 14px;
-            align-items: center;
-            padding: 12px;
+            width: 90%;
+            max-width: 800px;
+            margin: auto;
+            background: rgba(0,0,0,0.7);
+            padding: 25px;
             border-radius: 12px;
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(250, 250, 255, 0.98));
-            box-shadow: 0 8px 24px rgba(20, 40, 80, 0.06);
-            transform: translateY(0);
-            transition: transform 0.28s ease, box-shadow 0.28s ease;
-            border: 1px solid rgba(10, 25, 60, 0.03);
+            margin-top: 50px;
+            backdrop-filter: blur(6px);
         }
-        
-        .car-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 18px 40px rgba(10, 40, 110, 0.12);
-            border-color: rgba(10, 25, 60, 0.07);
-        }
-        /* small rotating car icon */
-        
-        .car-icon {
-            width: 46px;
-            height: 46px;
-            flex: 0 0 46px;
-            animation: rotateCar 1.8s linear infinite, iconGlow 1.8s ease-in-out infinite alternate;
-            filter: drop-shadow(0 6px 10px rgba(0, 140, 255, 0.12));
-        }
-        
-        @keyframes rotateCar {
-            from {
-                transform: rotate(0deg);
-            }
-            to {
-                transform: rotate(360deg);
-            }
-        }
-        
-        @keyframes iconGlow {
-            0% {
-                filter: drop-shadow(0 0 4px rgba(0, 160, 255, 0.12));
-            }
-            100% {
-                filter: drop-shadow(0 0 14px rgba(0, 120, 255, 0.22));
-            }
-        }
-        /* card content */
-        
-        .card-body h3 {
-            margin: 0;
-            color: #032c63;
-            font-size: 16px;
-        }
-        
-        .card-body p {
-            margin: 4px 0;
-            color: #1a3a5f;
-            font-size: 14px;
-        }
-        /* no result */
-        
-        .no-result {
-            padding: 30px;
+
+        h1, p {
             text-align: center;
-            color: #455;
+            color: white;
         }
-        /* compare & small controls */
-        
-        .controls {
-            display: flex;
-            gap: 8px;
-            justify-content: space-between;
-            align-items: center;
+
+        h1 {
+            font-size: 40px;
+            color: #00eaff;
+            text-shadow: 0 0 10px #00eaff;
+        }
+
+        label {
+            font-size: 18px;
+        }
+
+        select, button {
+            width: 100%;
+            padding: 12px;
             margin-top: 10px;
+            font-size: 17px;
+            border-radius: 6px;
+            border: none;
         }
-        /* responsive */
-        
-        @media (max-width:900px) {
-            .form-grid {
-                grid-template-columns: 1fr;
-            }
-            .actions {
-                justify-content: stretch;
-                flex-direction: column;
-            }
-            .car-card {
-                gap: 12px;
-                padding: 10px;
-            }
+
+        button {
+            margin-top: 20px;
+            background: #00eaff;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
         }
-        /* utility */
-        
-        .hidden {
-            display: none!important
+
+        .result-box {
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
         }
     </style>
 </head>
 
 <body>
-    <!-- animated slideshow background -->
-    <div class="bg-slide"></div>
-    <div class="bg-overlay"></div>
-    <div class="container">
-        <header class="site-header">
-            <h1 style="color:white">Car Recommendation System </h1>
-            <p style="color:white">Choose your preferences</p>
-        </header>
-        <section class="glass form-section">
-            <h2 style="margin-bottom:12px;">Set your preferences</h2>
-            <form id="prefForm">
-                <div class="form-grid">
-                    <div>
-                        <div class="form-row"><label for="budget">Maximum Budget (₹)</label><input id="budget" type="number" placeholder="e.g. 3000000"></div>
-                        <div class="form-row"><label for="fuel">Fuel Type</label><select id="fuel"><option value="">Any</option><option>Petrol</option><option>Diesel</option><option>Electric</option><option>Hybrid</option><option>Hydrogen</option><option>CNG</option></select></div>
-                        <div class="form-row"><label for="body">Body Type</label><select id="body"><option value="">Any</option><option>Sedan</option><option>SUV</option><option>Hatchback</option><option>MPV</option><option>Pickup</option><option>Sports</option><option>Truck</option></select></div>
-                    </div>
-                    <div>
-                        <div class="form-row"><label for="brand">Brand</label><select id="brand"><option value="">Any</option><option>Toyota</option><option>Honda</option><option>Tesla</option><option>BMW</option><option>Audi</option><option>Mercedes</option><option>Kia</option><option>Hyundai</option><option>Maruti</option><option>Tata</option></select></div>
-                        <div class="form-row"><label for="safety">Min Safety Rating (stars)</label><select id="safety"><option value="">Any</option><option value="3">3+</option><option value="4">4+</option><option value="5">5</option></select></div>
-                        <div class="form-row"><label for="seating">Minimum Seating</label><input id="seating" type="number" min="1" placeholder="e.g. 5"></div>
-                    </div>
-                </div>
-                <div style="margin-top:10px;"><label for="features">Required features (comma separated)</label><input id="features" type="text" placeholder="AC, Bluetooth, GPS, Autopilot">
-                    <div class="feature-chips" style="margin-top:8px;"><button type="button" class="chip" data-feature="AC">AC</button><button type="button" class="chip" data-feature="Bluetooth">Bluetooth</button><button type="button" class="chip" data-feature="GPS">GPS</button><button type="button" class="chip"
-                            data-feature="Autopilot">Autopilot</button><button type="button" class="chip" data-feature="Sunroof">Sunroof</button></div>
-                </div>
-                <div class="actions"><button type="button" id="clearBtn" class="btn ghost">Clear</button><button type="submit" id="submitBtn" class="btn primary">Get Recommendations →</button></div>
-            </form>
-        </section>
-    </div>
-    <script>
-        /* chips behavior */
 
-        document.querySelectorAll('.chip').forEach(chip => {
-                chip.addEventListener('click', () => {
-                    chip.classList.toggle('active');
-                    const fInput = document.getElementById('features');
-                    const cur = fInput.value.split(',').map(s => s.trim()).filter(Boolean);
-                    const feat = chip.dataset.feature;
-                    if (chip.classList.contains('active')) {
-                        if (!cur.includes(feat)) cur.push(feat);
-                    } else {
-                        const i = cur.indexOf(feat);
-                        if (i >= 0) cur.splice(i, 1);
-                    }
-                    fInput.value = cur.join(', ');
-                });
-            }
+<div class="container">
+    <h1>Car Recommendation System</h1>
+    <p>Choose your preferences</p>
 
-        );
-        document.getElementById('clearBtn').addEventListener('click', () => {
-                document.getElementById('prefForm').reset();
-                document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
-                document.getElementById('features').value = '';
-            }
+    <label>Select Brand</label>
+    <select id="brand">
+        <option value="">-- Select --</option>
+        <option value="Honda">Honda</option>
+        <option value="Toyota">Toyota</option>
+        <option value="Tesla">Tesla</option>
+        <option value="BMW">BMW</option>
+        <option value="Audi">Audi</option>
+        <option value="Mercedes">Mercedes</option>
+        <option value="Kia">Kia</option>
+        <option value="Hyundai">Hyundai</option>
+        <option value="Maruti">Maruti</option>
+        <option value="Tata">Tata</option>
+    </select>
 
-        );
-        /* submit preferences and move to results page */
+    <label>Select Fuel Type</label>
+    <select id="fuel">
+        <option value="">-- Select --</option>
+        <option value="Petrol">Petrol</option>
+        <option value="Diesel">Diesel</option>
+        <option value="Electric">Electric</option>
+        <option value="Hybrid">Hybrid</option>
+    </select>
 
-        document.getElementById('prefForm').addEventListener('submit', function(e) {
-                e.preventDefault();
-                const prefs = {
-                    budget: document.getElementById('budget').value,
-                    brand: document.getElementById('brand').value,
-                    fuel: document.getElementById('fuel').value,
-                    body: document.getElementById('body').value,
-                    safety: document.getElementById('safety').value,
-                    seating: document.getElementById('seating').value,
-                    features: document.getElementById('features').value
-                };
-                localStorage.setItem('carPreferences', JSON.stringify(prefs));
-                
-               
-            }
+    <button onclick="recommendCar()">Get Recommendation</button>
 
-        );
+    <div id="result" class="result-box" style="display:none;"></div>
+</div>
 
 
-        /* ---------- embedded dataset (100 rows: 10 brands × 10 cars) ---------- */
-        /* Re-using dataset from the earlier full project: */
-        const CAR_DATA = [{
+<script>
+       const CAR_DATA = [{
                 brand: "Toyota",
                 model: "Corolla",
                 fuel: "Petrol",
@@ -1655,16 +1229,89 @@
 
         /* back and print buttons */
         document.getElementById('backBtn').addEventListener('click', () => {
-
+          
         });
         document.getElementById('printBtn').addEventListener('click', () => window.print());
 
         /* init */
         document.addEventListener('DOMContentLoaded', showResults);
-    </script>
-</body>
-
-</html>
 </script>
-</body>
 
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preeti | Portfolio</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1a1a1a, #333);
+            color: white;
+        }
+        header {
+            text-align: center;
+            padding: 60px 20px;
+        }
+        header h1 {
+            font-size: 42px;
+            color: #00eaff;
+        }
+        .section {
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+        h2 {
+            color: #00eaff;
+            border-left: 5px solid #00eaff;
+            padding-left: 10px;
+        }
+        .project-box {
+            background: #222;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border: 1px solid #444;
+        }
+        a {
+            color: #00eaff;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Preeti Choudhary</h1>
+    <p>Machine Learning Engineer | Data Science Enthusiast</p>
+</header>
+
+<div class="section">
+    <h2>About Me</h2>
+    <p>I am a passionate Machine Learning & Data Science enthusiast...</p>
+</div>
+
+<div class="section">
+    <h2>Projects</h2>
+
+    <div class="project-box">
+        <h3>🚗 Car Recommendation System (Machine Learning)</h3>
+        <p>Recommends cars based on user preferences.</p>
+        <p><a href="recommendation.html">🔗 Live Demo</a></p>
+    </div>
+</div>
+
+<div class="section">
+    <h2>Contact</h2>
+    <p>Email: choudharypreeti775@gmail.com</p>
+    <p>GitHub: github.com/preetchoudhary333</p>
+</div>
+
+</body>
+</html>
